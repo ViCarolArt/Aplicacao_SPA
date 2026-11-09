@@ -1,57 +1,85 @@
 🌐 SPA — Modelos de Renderização Web
 
-Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento Web III, com o objetivo de apresentar e demonstrar diferentes modelos de renderização de aplicações web.
+<p align="center">
+  <img src="https://img.shields.io/badge/Projeto-Acadêmico-6C63FF?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
+</p><p align="center">
+  Estudo prático sobre diferentes estratégias de renderização de aplicações web.
+</p>---
 
-O projeto aborda três estratégias: CSR (Client-Side Rendering), SSG (Static Site Generation) e SSR (Server-Side Rendering), utilizando exemplos inspirados em plataformas conhecidas.
+✨ Sobre o projeto
 
-📚 Sobre o projeto
+Este projeto foi desenvolvido como atividade acadêmica da disciplina de Desenvolvimento Web III, com o objetivo de compreender e demonstrar três modelos de renderização utilizados no desenvolvimento de aplicações web.
 
-O objetivo é compreender como cada modelo funciona, onde acontece a renderização e quais são suas principais características.
+A proposta apresenta exemplos inspirados em plataformas conhecidas, facilitando a compreensão de como cada estratégia funciona na prática.
 
-🔹 1. CSR — Gmail
+🚀 Modelos apresentados
 
-Client-Side Rendering
+01. CSR — Client-Side Rendering
 
-- Renderização realizada no navegador.
-- Utiliza JavaScript para construir a interface.
-- Atualiza os conteúdos sem recarregar toda a página.
+<p>
+  <img src="https://img.shields.io/badge/Renderização-Navegador-4285F4?style=flat-square" />
+</p>Exemplo: Gmail
 
-Exemplo: caixa de entrada inspirada no Gmail.
+A interface é construída pelo JavaScript diretamente no navegador.
 
-🔹 2. SSG — Wikipedia
+- Atualização dinâmica de conteúdo.
+- Navegação interativa.
+- Renderização realizada no cliente.
 
-Static Site Generation
+02. SSG — Static Site Generation
 
-- Páginas geradas antecipadamente.
-- Conteúdo preparado durante o processo de build.
-- Favorece carregamento rápido e otimização para mecanismos de busca.
+<p>
+  <img src="https://img.shields.io/badge/Renderização-Estática-2EA44F?style=flat-square" />
+</p>Exemplo: Wikipedia
 
-Exemplo: artigo informativo inspirado na Wikipedia.
+As páginas são geradas antecipadamente durante o processo de construção do projeto.
 
-🔹 3. SSR — Nike
+- HTML preparado previamente.
+- Carregamento geralmente rápido.
+- Ideal para conteúdos que não precisam mudar a cada requisição.
 
-Server-Side Rendering
+03. SSR — Server-Side Rendering
 
-- Renderização realizada no servidor a cada requisição.
-- Permite apresentar informações atualizadas.
-- Pode combinar conteúdo renderizado no servidor com interatividade no navegador.
+<p>
+  <img src="https://img.shields.io/badge/Renderização-Servidor-8957E5?style=flat-square" />
+</p>Exemplo: Nike
 
-Exemplo: página de produto inspirada na loja Nike.
+O servidor gera a página a cada requisição, enquanto o navegador pode executar funcionalidades interativas.
+
+- Conteúdo gerado no servidor.
+- Possibilidade de apresentar informações atualizadas.
+- Interatividade com JavaScript.
+
+---
+
+📊 Comparação dos modelos
+
+Característica| CSR| SSG| SSR
+Renderização| Navegador| Antecipada| Servidor
+Conteúdo| Dinâmico| Pré-gerado| Por requisição
+Carregamento inicial| Variável| Geralmente rápido| Variável
+Interatividade| Sim| Sim| Sim
+Atualização| No cliente| Conforme regeneração| A cada requisição
 
 🛠️ Tecnologias utilizadas
 
-- HTML5
-- CSS3
-- JavaScript
-- React
-- Next.js
-- Node.js
-- npm
-- Visual Studio Code
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,nextjs,nodejs,vscode" />
+</p>- HTML5: estrutura das páginas.
+- CSS3: estilização das interfaces.
+- JavaScript: funcionalidades e interatividade.
+- React: construção de componentes.
+- Next.js: implementação dos modelos SSG e SSR.
+- Node.js e npm: execução e gerenciamento dos projetos.
+- Visual Studio Code: ambiente de desenvolvimento.
 
 📁 Estrutura do projeto
 
 SPA/
+│
 ├── 01-CSR-GMAIL/
 │   ├── index.html
 │   ├── style.css
@@ -62,22 +90,25 @@ SPA/
 │   │   └── index.js
 │   └── package.json
 │
-└── 03-SSR-NIKE/
-    ├── pages/
-    │   └── index.js
-    └── package.json
+├── 03-SSR-NIKE/
+│   ├── pages/
+│   │   └── index.js
+│   └── package.json
+│
+└── README.md
 
-▶️ Como executar
+💻 Como executar o projeto
+
+Pré-requisitos
+
+- "Node.js" (https://nodejs.org/)
+- "Visual Studio Code" (https://code.visualstudio.com/)
 
 CSR — Gmail
 
-1. Abra a pasta "01-CSR-GMAIL" no VS Code.
-2. Abra o arquivo "index.html" no navegador.
-3. Se preferir, utilize a extensão Live Server.
+Abra a pasta "01-CSR-GMAIL" e execute o arquivo "index.html" no navegador.
 
 SSG — Wikipedia
-
-No terminal, acesse a pasta do projeto:
 
 cd 02-SSG-WIKIPEDIA
 npm install
@@ -87,47 +118,37 @@ Acesse: "http://localhost:3000"
 
 SSR — Nike
 
-Em outro terminal, acesse:
-
 cd 03-SSR-NIKE
 npm install
 npm run dev -- -p 3001
 
 Acesse: "http://localhost:3001"
 
-📊 Comparação dos modelos
+---
 
-Característica| CSR| SSG| SSR
-Renderização| Navegador| Antecipada| Servidor
-Conteúdo| Dinâmico| Pré-gerado| Gerado por requisição
-Primeiro carregamento| Pode ser mais lento| Geralmente rápido| Depende do servidor
-Interatividade| JavaScript| JavaScript| JavaScript
+🎓 Objetivos de aprendizagem
 
-🎯 Aprendizados
+- Compreender os modelos de renderização web.
+- Identificar as diferenças entre CSR, SSG e SSR.
+- Desenvolver exemplos práticos utilizando JavaScript e Next.js.
+- Conhecer vantagens e limitações de cada estratégia.
+- Entender como essas tecnologias contribuem para a experiência do usuário.
 
-Durante o desenvolvimento, foram explorados:
-
-- Diferenças entre estratégias de renderização.
-- Funcionamento do JavaScript no navegador.
-- Geração de páginas estáticas.
-- Renderização de páginas no servidor.
-- Estruturação de projetos com React e Next.js.
-
-📖 Referências
+📚 Referências
 
 - "Next.js — Documentação oficial" (https://nextjs.org/docs)
 - "Next.js — Static Site Generation" (https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation)
-- "Next.js — Server-Side Rendering" (https://nextjs.org/docs/pages/building-your-application/data-fetching/get-server-side-props)
+- "Next.js — getServerSideProps" (https://nextjs.org/docs/pages/building-your-application/data-fetching/get-server-side-props)
 - Material de aula — Desenvolvimento Web III.
-
-👩‍💻 Autoria
-
-Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento Web III.
-
-Professora: Simone Mendes da Silva.
-
-Instituição: Fatec Indaiatuba.
 
 ---
 
-Este projeto possui finalidade educacional. Os exemplos Gmail, Wikipedia e Nike são demonstrações didáticas inspiradas nas plataformas, não reproduções de seus códigos originais.
+<p align="center">
+  <strong>Desenvolvido para fins acadêmicos 💜</strong>
+  <br>
+  Fatec Indaiatuba
+  <br><br>
+  <sub>Professora: Simone Mendes da Silva</sub>
+</p><p align="center">
+  ⭐ Obrigada por visitar este repositório!
+</p>Observação: Gmail, Wikipedia e Nike são referências ilustrativas para os exemplos didáticos. O projeto não utiliza o código-fonte original dessas plataformas.
